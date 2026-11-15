@@ -1,0 +1,8 @@
+{
+  "name": "MolSpec ADME & PubChem Explorer",
+  "description": "Case-insensitive chemical formula and compound analyzer powered by PubChem (124.8M+ compounds), an indexed 112k+ compound and 118-element library, and Windows Electron desktop packaging.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

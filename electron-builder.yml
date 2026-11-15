@@ -1,0 +1,35 @@
+appId: com.molspec.adme.explorer
+productName: MolSpec ADME Explorer
+copyright: Copyright © 2026 MolSpec ADME Explorer
+directories:
+  output: release
+  buildResources: build
+files:
+  - dist/**/*
+  - dist-electron/**/*
+  - electron/**/*
+  - build/icon.png
+  - package.json
+  - "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}"
+  - "!**/node_modules/.bin"
+extraResources:
+  - from: data/pubchem_100k.tsv.gz
+    to: data/pubchem_100k.tsv.gz
+asar: true
+win:
+  icon: build/icon.png
+  target:
+    - target: portable
+      arch:
+        - x64
+    - target: nsis
+      arch:
+        - x64
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: MolSpec ADME Explorer
+portable:
+  artifactName: MolSpec-ADME-Explorer-Windows-Portable.exe
